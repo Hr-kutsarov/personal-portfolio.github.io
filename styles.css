@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+GLOBAL == BODY, SET FONTS HERE */
+body {
+  display: grid;
+  column-count: 100wv;
+  height: 100vh;
+}
+/* 
+HEADER STYLES
+ */
+header {
+  display: block;
+  background-color: #aff;
+}
+/* 
+MAIN STYLES
+ */
+main {
+  display: block;
+  background-color: #ffa;
+}
+/* 
+ FOOTER STYLES
+  */
+footer {
+  display: block;
+  background-color: #afa;
+}
