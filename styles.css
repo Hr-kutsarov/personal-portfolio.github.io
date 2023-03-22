@@ -9,7 +9,7 @@
   --red: #d62828;
   --orange: #f77f00;
   --yellow: #fcbf49;
-  --barf: #eae2b7;
+  --barf: hsl(51, 55%, 82%, 0.2);
 }
 
 @font-face {
@@ -26,8 +26,13 @@ body {
 .body-container {
   display: grid;
   grid-template-columns: 1;
+  align-items: center;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+}
+
+.shadow {
+  box-shadow: 2px 4px 8px hsl(0, 0%, 0%, 0.3);
 }
 
 /* HEADER SECTION UNDER*/
@@ -35,47 +40,98 @@ header {
   display: flex;
   width: 100vw;
   height: 40vh;
-  justify-content: center;
   background-color: var(--blue);
   scroll-snap-align: start;
+  box-shadow: 4px 8px 18px hsl(0, 0%, 0%, 0.3);
 }
 
 .header-content-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
+  max-width: 40vw;
   height: 300px;
   object-position: 50% 50%;
+  margin-left: 40vw;
 }
 .header-content-wrap > h1 {
+  font-size: 3rem;
   color: white;
 }
 
 .header-content-wrap > h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
   color: white;
 }
 .header-content-wrap > p {
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
   color: whitesmoke;
 }
 
-#btn-link-to-source {
-  display: inline;
-  color: white;
-  background-color: var(--red);
-}
-/* HEADER SECTION ABOVE*/
-
+/* MAIN SECTION */
 #main-container {
+  display: flex;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background-color: var(--barf);
   scroll-snap-align: start;
 }
 
+#short-bio {
+  max-width: 1200px;
+  margin: 4rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  background-color: white;
+  border-radius: 1rem;
+}
+#short-bio > figure {
+  background-color: var(--blue);
+  max-height: 300px;
+}
+.article-content > h2 {
+  padding: 1rem;
+  margin: 1rem;
+}
+.article-content > p {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+/* FOOTER SECTION */
+
 #footer-container {
   width: 100vw;
   height: 30vh;
   background-color: var(--orange);
   scroll-snap-align: start;
+}
+
+/* BUTTONS */
+
+.btn-learn-more {
+  display: block;
+  color: whitesmoke;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: var(--red);
+  max-width: 60%;
+}
+
+.btn-article {
+  margin: 2rem;
+  padding: 1rem;
+  max-width: 40%;
+  font-size: 1.2rem;
+}
+
+.btn-article:hover {
+  background-color: var(--orange);
 }
