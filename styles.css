@@ -3,31 +3,79 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --blue: #003049;
+  --red: #d62828;
+  --orange: #f77f00;
+  --yellow: #fcbf49;
+  --barf: #eae2b7;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("./Fonts/SourceSansPro-Regular.ttf");
+}
 /* 
 GLOBAL == BODY, SET FONTS HERE */
 body {
+  font-family: SourceSansPro, sans-serif;
+  line-height: 1.5rem;
+}
+
+.body-container {
   display: grid;
-  column-count: 100wv;
-  height: 100vh;
+  grid-template-columns: 1;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
-/* 
-HEADER STYLES
- */
+
+/* HEADER SECTION UNDER*/
 header {
-  display: block;
-  background-color: #aff;
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  justify-content: center;
+  background-color: var(--blue);
+  scroll-snap-align: start;
 }
-/* 
-MAIN STYLES
- */
-main {
-  display: block;
-  background-color: #ffa;
+
+.header-content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  object-position: 50% 50%;
 }
-/* 
- FOOTER STYLES
-  */
-footer {
-  display: block;
-  background-color: #afa;
+.header-content-wrap > h1 {
+  color: white;
+}
+
+.header-content-wrap > h2 {
+  color: white;
+}
+.header-content-wrap > p {
+  color: whitesmoke;
+}
+
+#btn-link-to-source {
+  display: inline;
+  color: white;
+  background-color: var(--red);
+}
+/* HEADER SECTION ABOVE*/
+
+#main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--barf);
+  scroll-snap-align: start;
+}
+
+#footer-container {
+  width: 100vw;
+  height: 30vh;
+  background-color: var(--orange);
+  scroll-snap-align: start;
 }
