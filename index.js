@@ -3,6 +3,9 @@ let shortBioTextBox = document.getElementById("short-bio-text");
 let articleTitle = document.querySelector("#short-bio-text > h2");
 let techButton = document.getElementById("technologies");
 let articleParagraph = document.querySelector(".article-text-front");
+// body-container
+let aside = document.querySelector("aside");
+
 // links
 const emailNav = document.getElementById("email-field-navigation");
 
@@ -57,18 +60,25 @@ function displayEmail() {
   emailNav.textContent = "some_email@gmail.com";
   setTimeout(() => {
     emailNav.textContent = "E-mail";
-  }, "6000");
+  }, "5000");
 }
 
 function displayPhone() {
   viberNav.textContent = "+359 889 232323";
-  setTimeout(() => {
-    viberNav.textContent = "Viber";
-  }, "8000");
 }
+
+function hideAvatar() {
+  let avatar = document.getElementById("avatar-pic");
+  if (scrollY === 0 && avatar.style.display === "none") {
+    avatar.style.display = "block";
+  } else {
+    avatar.style.display = "none";
+  }
+}
+
 // ======================== EVENT LISTENTERS ======================//
 helloBtn.addEventListener("click", toggleBio);
 techButton.addEventListener("click", toggleTechnologies);
-
 emailNav.addEventListener("mouseover", displayEmail);
 viberNav.addEventListener("mouseover", displayPhone);
+aside.addEventListener("click", hideAvatar);

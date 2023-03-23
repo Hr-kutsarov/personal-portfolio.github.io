@@ -224,3 +224,7 @@ main {
   background-image: url("./static/HK_ppic.jpg");
   border: 10px solid aliceblue;
 }
+
+.invisible {
+  opacity: 0;
+}
