@@ -3,8 +3,10 @@ let shortBioTextBox = document.getElementById("short-bio-text");
 let articleTitle = document.querySelector("#short-bio-text > h2");
 let techButton = document.getElementById("technologies");
 let articleParagraph = document.querySelector(".article-text-front");
+// links
+const emailNav = document.getElementById("email-field-navigation");
 
-// there are 2 paragraphs, need a mapping function
+const viberNav = document.getElementById("viber-field-navigation");
 let helloBtn = document.getElementById("hello-btn");
 
 const additionalInfo =
@@ -12,7 +14,7 @@ const additionalInfo =
 
 const additionalInfoParagraph =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos? Ipsum earum voluptatem illo harum, repudiandae, a ipsam.";
-// GLOBAL
+// GLOBAL HANDLERS
 
 function createNewParagraphElement(text) {
   let newParagraph = document.createElement("p");
@@ -36,6 +38,8 @@ function toggleBio() {
   shortBioTextBox.appendChild(newP);
   helloBtn.style.display = "none";
   techButton.style.display = "block";
+  let helloBackground = document.getElementById("separator");
+  helloBackground.style.display = "none";
 }
 
 function toggleTechnologies() {
@@ -45,9 +49,26 @@ function toggleTechnologies() {
   shortBioTextBox.appendChild(newP);
 
   techButton.textContent = "Return";
+  techButton.style.fontSize = "2rem";
   techButton.addEventListener("click", pageRefresh);
 }
 
+function displayEmail() {
+  emailNav.textContent = "some_email@gmail.com";
+  setTimeout(() => {
+    emailNav.textContent = "E-mail";
+  }, "4000");
+}
+
+function displayPhone() {
+  viberNav.textContent = "+359 889 232323";
+  setTimeout(() => {
+    viberNav.textContent = "Viber";
+  }, "4000");
+}
 // ======================== EVENT LISTENTERS ======================//
 helloBtn.addEventListener("click", toggleBio);
 techButton.addEventListener("click", toggleTechnologies);
+
+emailNav.addEventListener("mouseover", displayEmail);
+viberNav.addEventListener("mouseover", displayPhone);

@@ -73,14 +73,25 @@ aside {
 }
 
 #contact-links > li {
+  font-size: 1.2rem;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: whitesmoke;
   list-style-type: none;
-  line-height: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#contact-links > li:hover {
+  font-weight: 600;
 }
 
 #contact-links > li:first-child {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   cursor: none;
   font-weight: 600;
   font-size: 2rem;
@@ -120,6 +131,15 @@ main {
   line-height: 1.6rem;
 }
 
+#separator {
+  width: auto;
+  height: auto;
+  color: var(--orange);
+  position: absolute;
+  font-size: 12rem;
+  font-family: Lobster;
+  opacity: 0.1;
+}
 .btn-article {
   font-size: 1.2rem;
   display: grid;
