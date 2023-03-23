@@ -65,8 +65,12 @@ html {
 body {
   font-family: SourceSansPro, sans-serif;
   line-height: 1.5rem;
+}
+
+.body-box {
   display: grid;
-  grid-template-columns: 2fr 5fr;
+
+  grid-template-columns: 35% 65%;
 }
 
 .shadow {
@@ -87,9 +91,10 @@ aside {
 }
 
 .aside-content-wrap {
-  margin: 2rem;
+  margin: 4rem 4rem 4rem 4rem;
   display: flex;
   flex-direction: column;
+  -ms-flex-align: start;
 }
 
 .aside-content-wrap > h1 {
