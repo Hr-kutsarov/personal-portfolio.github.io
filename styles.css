@@ -23,6 +23,37 @@
   font-family: Lobster;
   src: url("./Fonts/Lobster-Regular.ttf");
 }
+
+@keyframes listHover {
+  0% {
+    left: 0px;
+  }
+
+  50% {
+    left: 20px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes example {
+  0% {
+    background-color: var(--red);
+  }
+  33% {
+    background-color: var(--orange);
+  }
+
+  66% {
+    background-color: var(--blue);
+  }
+  100% {
+    background-color: var(--red);
+  }
+}
+
 /* 
 GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL */
 body {
@@ -32,7 +63,7 @@ body {
 
 .body-container {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 2fr 5fr;
 }
 
 .shadow {
@@ -59,7 +90,7 @@ aside {
 
 .aside-content-wrap > h2 {
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
 }
 .aside-content-wrap > p {
@@ -68,16 +99,24 @@ aside {
   color: whitesmoke;
 }
 
-.btn-project {
-  margin: 1.5rem 0;
+#btn-project {
+  margin: 2rem 0;
+  display: block;
+}
+
+#btn-project:hover {
+  animation-name: example;
+  animation-duration: 4s;
 }
 
 #contact-links > li {
+  margin-left: 1rem;
   font-size: 1.2rem;
   cursor: pointer;
   margin-top: 1rem;
   color: whitesmoke;
   list-style-type: none;
+  position: relative;
 }
 
 a {
@@ -86,10 +125,14 @@ a {
 }
 
 #contact-links > li:hover {
-  font-weight: 600;
+  animation-name: listHover;
+  animation-duration: 2s;
 }
 
 #contact-links > li:first-child {
+  position: relative;
+  left: 0px;
+  margin-left: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
   cursor: none;
@@ -119,7 +162,8 @@ main {
 
 #short-bio-text > h2 {
   font-family: Lobster, sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
+  color: black;
   margin: 2rem 2rem 0 2rem;
   text-shadow: 2px 2px 4px hsla(0, 0%, 87%, 0.9);
 }

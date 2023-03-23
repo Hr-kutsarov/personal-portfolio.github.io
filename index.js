@@ -57,14 +57,14 @@ function displayEmail() {
   emailNav.textContent = "some_email@gmail.com";
   setTimeout(() => {
     emailNav.textContent = "E-mail";
-  }, "4000");
+  }, "6000");
 }
 
 function displayPhone() {
   viberNav.textContent = "+359 889 232323";
   setTimeout(() => {
     viberNav.textContent = "Viber";
-  }, "4000");
+  }, "8000");
 }
 // ======================== EVENT LISTENTERS ======================//
 helloBtn.addEventListener("click", toggleBio);
