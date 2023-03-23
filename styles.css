@@ -12,6 +12,8 @@
   --barf: hsl(51, 55%, 82%, 0.2);
 }
 
+/* FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS */
+
 @font-face {
   font-family: SourceSansPro;
   src: url("./Fonts/SourceSansPro-Regular.ttf");
@@ -22,7 +24,7 @@
   src: url("./Fonts/Lobster-Regular.ttf");
 }
 /* 
-GLOBAL == BODY, SET FONTS HERE */
+GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL GLOBAL */
 body {
   font-family: SourceSansPro, sans-serif;
   line-height: 1.5rem;
@@ -37,7 +39,7 @@ body {
   box-shadow: 2px 4px 8px hsl(0, 0%, 0%, 0.3);
 }
 
-/* HEADER SECTION UNDER*/
+/* SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR*/
 aside {
   display: flex;
   flex-direction: column;
@@ -69,7 +71,22 @@ aside {
 .btn-project {
   margin: 1.5rem 0;
 }
-/* MAIN SECTION */
+
+#contact-links > li {
+  cursor: pointer;
+  margin-top: 2rem;
+  color: whitesmoke;
+  list-style-type: none;
+  line-height: 1.6rem;
+}
+
+#contact-links > li:first-child {
+  cursor: none;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION*/
 main {
   display: grid;
   margin: auto;
@@ -80,7 +97,7 @@ main {
 }
 
 .short-bio {
-  max-width: 1200px;
+  display: block;
   margin: 4rem;
   padding: 2rem;
   display: grid;
@@ -89,14 +106,14 @@ main {
   box-shadow: 2px 4px 8px hsl(0, 0%, 0%, 0.2);
 }
 
-.short-bio > h2 {
+#short-bio-text > h2 {
   font-family: Lobster, sans-serif;
   font-size: 2rem;
   margin: 2rem 2rem 0 2rem;
   text-shadow: 2px 2px 4px hsla(0, 0%, 87%, 0.9);
 }
 
-.short-bio > p {
+#short-bio-text > p {
   padding: 1rem;
   margin: 1rem;
   font-size: 1.2rem;
@@ -113,7 +130,7 @@ main {
   background-color: var(--orange);
 }
 
-/* BUTTONS */
+/* BUTTONS  BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS*/
 
 .btn-learn-more {
   display: block;
@@ -124,11 +141,15 @@ main {
   cursor: pointer;
 }
 
-/* AVATAR */
+#technologies {
+  display: none;
+}
+
+/* AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR*/
 .avatar-container {
   margin-top: 4rem;
-  width: 14rem;
-  height: 14rem;
+  width: 16rem;
+  height: 16rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
