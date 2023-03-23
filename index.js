@@ -82,3 +82,5 @@ techButton.addEventListener("click", toggleTechnologies);
 emailNav.addEventListener("mouseover", displayEmail);
 viberNav.addEventListener("mouseover", displayPhone);
 aside.addEventListener("click", hideAvatar);
+
+// ====================== SWIPER ============================//
