@@ -239,21 +239,34 @@ main {
 }
 
 swiper-container {
-  z-index: 100;
   width: 100%;
   height: 100%;
 }
 
 swiper-slide {
-  text-align: center;
-  font-size: 18px;
+  text-align: left;
+  font-size: 4rem;
   background: transparent;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
+
+swiper-slide:last-child {
+  color: var(--blue);
+}
+swiper-slide > p {
+  line-height: 2rem;
+  font-family: SourceSansPro, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-left: 6rem;
+  margin-top: 6rem;
+
+  color: whitesmoke;
+  position: absolute;
+}
+
 swiper-slide img {
-  margin: 2rem;
   display: block;
   width: 100%;
   height: 100%;
@@ -265,11 +278,8 @@ swiper-slide img {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin: 0 4rem;
   max-height: 60vh;
-  /* border: 2px solid black; */
-  margin: 0 4rem 4rem 4rem;
   border-radius: 1rem;
   background-color: white;
-  /* color: whitesmoke; */
 }

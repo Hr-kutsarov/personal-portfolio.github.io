@@ -4,7 +4,7 @@ let articleTitle = document.querySelector("#short-bio-text > h2");
 let techButton = document.getElementById("technologies");
 let articleParagraph = document.querySelector(".article-text-front");
 // body-container
-let aside = document.querySelector("aside");
+let avatarPic = document.getElementById("avatar-pic");
 
 // links
 const emailNav = document.getElementById("email-field-navigation");
@@ -56,6 +56,7 @@ function toggleTechnologies() {
   techButton.addEventListener("click", pageRefresh);
 }
 
+// SIDE BAR SIDE BAR SIDE BAR SIDE BAR //
 function displayEmail() {
   emailNav.textContent = "some_email@gmail.com";
   setTimeout(() => {
@@ -69,7 +70,7 @@ function displayPhone() {
 
 function hideAvatar() {
   let avatar = document.getElementById("avatar-pic");
-  if (scrollY === 0 && avatar.style.display === "none") {
+  if (avatar.style.display === "none") {
     avatar.style.display = "block";
   } else {
     avatar.style.display = "none";
@@ -81,6 +82,4 @@ helloBtn.addEventListener("click", toggleBio);
 techButton.addEventListener("click", toggleTechnologies);
 emailNav.addEventListener("mouseover", displayEmail);
 viberNav.addEventListener("mouseover", displayPhone);
-aside.addEventListener("click", hideAvatar);
-
-// ====================== SWIPER ============================//
+avatarPic.addEventListener("click", hideAvatar);
