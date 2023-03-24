@@ -83,3 +83,8 @@ techButton.addEventListener("click", toggleTechnologies);
 emailNav.addEventListener("mouseover", displayEmail);
 viberNav.addEventListener("mouseover", displayPhone);
 avatarPic.addEventListener("click", hideAvatar);
+
+// HIDE TIMELINE
+
+let timeline = document.getElementById("education");
+// timeline.style.display = "none";
