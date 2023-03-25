@@ -15,7 +15,7 @@ const viberNav = document.getElementById("viber-field-navigation");
 let helloBtn = document.getElementById("hello-btn");
 
 // MAIN - EDUCATION
-
+let collegeSchoolBox = document.getElementById("college-school-box");
 let culinarySchoolBox = document.getElementById("culinary-school-box");
 let economicsSchoolBox = document.getElementById("economics-school-box");
 let moreInfoButton = document.getElementById("more-education-info");
@@ -88,6 +88,7 @@ function hideAvatar() {
 }
 
 function showInfoEducation() {
+  collegeSchoolBox.style.display = "block";
   culinarySchoolBox.style.display = "block";
   economicsSchoolBox.style.display = "block";
   moreInfoButton.textContent = "Show less";
