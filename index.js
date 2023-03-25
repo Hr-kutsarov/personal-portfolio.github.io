@@ -1,22 +1,34 @@
-// alert("hello");
+// GLOBAL ELEMENTS
+
+// MAIN - ARTICLE
 let shortBioTextBox = document.getElementById("short-bio-text");
 let articleTitle = document.querySelector("#short-bio-text > h2");
-let techButton = document.getElementById("technologies");
 let articleParagraph = document.querySelector(".article-text-front");
-// body-container
+let techButton = document.getElementById("technologies");
+
+//HEADER
+
+let avatarBox = document.getElementById("avatar-box");
 let avatarPic = document.getElementById("avatar-pic");
-
-// links
 const emailNav = document.getElementById("email-field-navigation");
-
 const viberNav = document.getElementById("viber-field-navigation");
 let helloBtn = document.getElementById("hello-btn");
+
+// MAIN - EDUCATION
+
+let culinarySchoolBox = document.getElementById("culinary-school-box");
+let economicsSchoolBox = document.getElementById("economics-school-box");
+let moreInfoButton = document.getElementById("more-education-info");
+let showAllButton = document.getElementById("show-all");
+
+// String constants
 
 const additionalInfo =
   "Laudantium odio placeat magnam minima molestiae saepe tempore qui explicabo pariatur hic? Alias dignissimos expedita dicta ex nam nobis consectetur distinctio officia quisquam assumenda, nulla aspernatur placeat dolores necessitatibus tenetur voluptatum labore accusantium deleniti nihil minima enim voluptates praesentium! Magni, dolorum error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur nihil adipisci modi rem voluptatem, ullam nobis veritatis officiis nostrum recusandae rerum dicta nisi obcaecati corporis sunt molestias unde ea.";
 
 const additionalInfoParagraph =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos? Ipsum earum voluptatem illo harum, repudiandae, a ipsam.";
+
 // GLOBAL HANDLERS
 
 function createNewParagraphElement(text) {
@@ -68,23 +80,38 @@ function displayPhone() {
   viberNav.textContent = "+359 889 232323";
 }
 
+function showAvatar() {
+  avatarPic.style.display = "block";
+}
 function hideAvatar() {
-  let avatar = document.getElementById("avatar-pic");
-  if (avatar.style.display === "none") {
-    avatar.style.display = "block";
-  } else {
-    avatar.style.display = "none";
-  }
+  avatarPic.style.display = "none";
 }
 
+function showInfoEducation() {
+  culinarySchoolBox.style.display = "block";
+  economicsSchoolBox.style.display = "block";
+  moreInfoButton.textContent = "Show less";
+  moreInfoButton.addEventListener("click", clearInfoEducation);
+}
+
+function clearInfoEducation() {
+  let timelineBox = document.querySelector(".timeline");
+  timelineBox.classList.add("invisible");
+  timelineBox.style.display = "none";
+  showAllButton.style.display = "block";
+  showAllButton.addEventListener("dblclick", showEverythingEducation);
+  moreInfoButton.style.display = "none";
+}
+
+function showEverythingEducation() {
+  let timelineBox = document.querySelector(".timeline");
+  timelineBox.style.display = "block";
+  showAllButton.style.display = "none";
+}
 // ======================== EVENT LISTENTERS ======================//
 helloBtn.addEventListener("click", toggleBio);
 techButton.addEventListener("click", toggleTechnologies);
 emailNav.addEventListener("mouseover", displayEmail);
 viberNav.addEventListener("mouseover", displayPhone);
 avatarPic.addEventListener("click", hideAvatar);
-
-// HIDE TIMELINE
-
-let timeline = document.getElementById("education");
-// timeline.style.display = "none";
+moreInfoButton.addEventListener("click", showInfoEducation);

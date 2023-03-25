@@ -14,7 +14,9 @@
     <div class="body-box">
       <!-- <div class="side-container" id="side-id"> -->
       <aside>
-        <div class="avatar-container" id="avatar-pic"></div>
+        <div class="avatar-container" id="avatar-box">
+          <div id="avatar-pic"></div>
+        </div>
 
         <div class="aside-content-wrap">
           <h1>Welcome,</h1>
@@ -29,23 +31,24 @@
               >Link to the source code</a
             >
           </div>
-          <ul id="contact-links">
-            <li>Contacts</li>
-            <li>
-              <a href="https://www.linkedin.com/in/hristo-kutsarov-794105136/"
-                >Linkedin</a
-              >
-            </li>
-            <li><a href="https://github.com/Hr-kutsarov">GitHub</a></li>
-            <li id="email-field-navigation">E-mail</li>
-            <li id="viber-field-navigation">Viber</li>
-            <li>
-              <a href="https://www.discordapp.com/users/Persistence#3379"
-                >Discord</a
-              >
-            </li>
-          </ul>
+          
         </div>
+        <ul id="contact-links">
+          <li>Contacts</li>
+          <li>
+            <a href="https://www.linkedin.com/in/hristo-kutsarov-794105136/"
+              >Linkedin</a
+            >
+          </li>
+          <li><a href="https://github.com/Hr-kutsarov">GitHub</a></li>
+          <li id="email-field-navigation">E-mail</li>
+          <li id="viber-field-navigation">Viber</li>
+          <li>
+            <a href="https://www.discordapp.com/users/Persistence#3379"
+              >Discord</a
+            >
+          </li>
+        </ul>
       </aside>
       <!-- </div> -->
 
@@ -79,11 +82,14 @@
         <div class="swiper-box shadow">
           <swiper-container
             class="mySwiper"
+            pagination-color: #FFBA08
             pagination-dynamic-bullets="true"
             loop="true"
             gap="30"
             space-between="30"
             effect="fade"
+            keyboard="true"
+            navigation="true"
           >
             <swiper-slide
               ><img src="./static/slider/start.jpg" />
@@ -156,50 +162,54 @@
           </swiper-container>
           
         </div>
-        <div id="education">
+        <div class='section-heading'id="education">
           <h3>Education</h3>
 
-
+          <!--  -->
             <div id="timeline-container">
               <div class="timeline">
-                <div class="container left">
-                  <div class="date">1954</div>
-        
-                  <div class="content">
-                    <h2>Professional Degree in Economics and Management</h2>
-
-                    <p>High school, Pazardzhik</p>
-                  </div>
-                </div>
                 <div class="container right">
-                  <div class="date">22 Oct</div>
+                  <div class="date" id="important-date">Mar '23</div>
         
-                  <div class="content">
-                    <h2>College Delta Plovdiv</h2>
+                  
+                    <h2>JavaScript Advanced</h2>
 
-                    <p>Design and Advertisement course</p>
+                    <p>Exam</p>
+                  <br>
+                    <h2>JS Applications</h2>
 
-                  </div>
+                    <p>Exam</p>
+                    <br>
+                    <h2>HTML & CSS</h2>
+
+                    <p>Exam</p>
+                    <br>
+                    <h2>JS Framework - React</h2>
+
+                    <p>Exam</p>
                 </div>
+                <!--  -->
                 <div class="container left">
                   <div class="date">10 Jul</div>
         
                   <div class="content">
-                    <h2>HRC Culinary Academy</h2>
+                    <h2>Python Web Framework</h2>
 
-                    <p>Full professional cullinary course</p>
+                    <p>Professional Certificate from SoftUni</p>
 
                   </div>
                 </div>
+                <!--  -->
                 <div class="container right">
                   <div class="date">Jan '22</div>
         
                   <div class="content">
-                    <h2>Programming fundamentals with Python</h2>
+                    <h2>Python Web Basics</h2>
 
-                    <p>Professional Certificate from SoftUni</p>
+                    <p>Professional Certificate</p>
                   </div>
                 </div>
+                <!--  -->
                 <div class="container left">
                   <div class="date">May '22</div>
         
@@ -209,53 +219,78 @@
                     <p>Professional Certificate</p>
                   </div>
                 </div>
+                <!--  -->
                 <div class="container right">
-                  <div class="date">Sep '22</div>
+                  <div class="date">Jan '22</div>
         
                   <div class="content">
-                    <h2>Python Web Basics</h2>
+                    <h2>Programming Fundamentals with Python</h2>
 
                     <p>
                       Professional Certificate
                     </p>
                   </div>
                 </div>
-                <div class="container left">
-                  <div class="date">Nov '22</div>
+                <!--  -->
+                <div class="container left" id="culinary-school-box">
+                  <div class="date">2017</div>
         
                   <div class="content">
-                    <h2>Python Web Framework</h2>
+                    <h2>HRC Culinary Academy</h2>
 
-                    <p>Professional Certificate</p>
+                    <p>Full Professional Culinary Course</p>
                   </div>
                 </div>
-                <div class="container right">
+                <!--  -->
+                <div class="container right" id="economics-school-box">
                   <div class="date">Mar '23</div>
         
-                  <div class="content" id="exams">
-                    <h2>JavaScript Advanced</h2>
+                  <div class="content">
+                    <h2>
+                      Professional Degree in Economics and Management</h2>
 
-                    <p>Exam</p>
+                    <p>High school, Pazardzhik</p>
 
-                    <h2>JS Applications</h2>
 
-                    <p>Exam</p>
-
-                    <h2>HTML & CSS</h2>
-
-                    <p>Exam</p>
-
-                    <h2>JS Framework - React</h2>
-
-                    <p>Exam</p>
                   </div>
                 </div>
+
               </div>
+
             </div>
-
-          
-
-
+            <div class="btn-learn-more btn-article shadow" id="show-all">
+              Show everything
+            </div>
+            <div class="btn-learn-more btn-article shadow" id="more-education-info">
+              Learn more
+            </div>
+            <div id="interests-heading">
+              <h2>My current interests</h2>
+            </div>
+            <div id="interests">
+              <img src="./static/icons/next-js-logo.svg.svg" alt="next-js-logo">
+              <img src="./static/icons/React_logo.svg.svg" alt="react-logo">
+              
+              <img src="./static/icons/Django_logo.svg.svg" alt="django_logo">
+              <img src="./static/icons/Selenium_logo.svg.svg" alt="selenium_logo">
+            </div>
+            <div id="footer-info">
+              <ul id="contact-links-bottom">
+                <li>
+                  <a href="https://www.linkedin.com/in/hristo-kutsarov-794105136/"
+                    >Linkedin</a
+                  >
+                </li>
+                <li><a href="https://github.com/Hr-kutsarov">GitHub</a></li>
+                <li >E-mail</li>
+                <li >Viber</li>
+                <li>
+                  <a href="https://www.discordapp.com/users/Persistence#3379"
+                    >Discord</a
+                  >
+                </li>
+              </ul>
+            </div>
       </main>
     </div>
   </body>
@@ -263,3 +298,5 @@
   <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </html>
+
+
