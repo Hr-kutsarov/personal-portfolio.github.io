@@ -73,14 +73,14 @@ function toggleTechnologies() {
 
 // SIDE BAR SIDE BAR SIDE BAR SIDE BAR //
 function displayEmail() {
-  emailNav.textContent = "some_email@gmail.com";
+  emailNav.textContent = "hr.kutsarov@gmail.com";
   setTimeout(() => {
     emailNav.textContent = "E-mail";
   }, "5000");
 }
 
 function displayPhone() {
-  viberNav.textContent = "+359 889 232323";
+  viberNav.textContent = "+359 889 162334";
 }
 
 function showAvatar() {
