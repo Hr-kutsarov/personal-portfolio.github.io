@@ -34,19 +34,12 @@
           
         </div>
         <ul id="contact-links">
-          <li>Contacts</li>
+          <li>/ ...</li>
+          <li><a href="#article">Info</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
           <li>
-            <a href="https://www.linkedin.com/in/hristo-kutsarov-794105136/"
-              >Linkedin</a
-            >
-          </li>
-          <li><a href="https://github.com/Hr-kutsarov">GitHub</a></li>
-          <li id="email-field-navigation">E-mail</li>
-          <li id="viber-field-navigation">Viber</li>
-          <li>
-            <a href="https://www.discordapp.com/users/Persistence#3379"
-              >Discord</a
-            >
+            <a href="#footer-info">Contacts</a>
           </li>
         </ul>
       </aside>
@@ -79,7 +72,7 @@
             Technologies I've studied
           </div>
         </article>
-        <div class="swiper-box shadow">
+        <div class="swiper-box shadow" id="experience">
           <swiper-container
             class="mySwiper"
             pagination-color: #FFBA08
@@ -268,11 +261,12 @@
               <h2>My current interests</h2>
             </div>
             <div id="interests">
-              <img src="./static/icons/next-js-logo.svg.svg" alt="next-js-logo">
-              <img src="./static/icons/React_logo.svg.svg" alt="react-logo">
+              <a href="https://react.dev/"><img src="./static/icons/React_logo.svg.svg" alt="react-logo"></a>
+              <a href="https://nextjs.org/"><img src="./static/icons/next-js-logo.svg.svg" alt="next-js-logo"></a>
               
-              <img src="./static/icons/Django_logo.svg.svg" alt="django_logo">
-              <img src="./static/icons/Selenium_logo.svg.svg" alt="selenium_logo">
+              <a href="https://www.djangoproject.com/"><img src="./static/icons/Django_logo.svg.svg" alt="django-logo"></a>
+              <a href="https://docs.celeryq.dev/en/stable/getting-started/introduction.html"><img src="./static/icons/celery.png" alt="celery-logo"></a>
+              <a href="https://www.selenium.dev/"><img src="./static/icons/Selenium_logo.svg.svg" alt="selenium-logo"></a>
             </div>
             <div id="footer-info">
               <ul id="contact-links-bottom">
@@ -282,8 +276,8 @@
                   >
                 </li>
                 <li><a href="https://github.com/Hr-kutsarov">GitHub</a></li>
-                <li >E-mail</li>
-                <li >Viber</li>
+                <li id="email-field-navigation" ><a href="mailto:hr.kutsarov@gmail.com">E-mail</a></li>
+                <li id="viber-field-navigation">Viber</li>
                 <li>
                   <a href="https://www.discordapp.com/users/Persistence#3379"
                     >Discord</a
@@ -298,5 +292,4 @@
   <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </html>
-
 
