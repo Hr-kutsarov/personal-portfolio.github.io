@@ -24,10 +24,12 @@ let showAllButton = document.getElementById("show-all");
 // String constants
 
 const additionalInfo =
-  "Laudantium odio placeat magnam minima molestiae saepe tempore qui explicabo pariatur hic? Alias dignissimos expedita dicta ex nam nobis consectetur distinctio officia quisquam assumenda, nulla aspernatur placeat dolores necessitatibus tenetur voluptatum labore accusantium deleniti nihil minima enim voluptates praesentium! Magni, dolorum error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur nihil adipisci modi rem voluptatem, ullam nobis veritatis officiis nostrum recusandae rerum dicta nisi obcaecati corporis sunt molestias unde ea.";
+  "I'm 33 years old and I live in Sofia. When I was in high school my buddy and I were making websites and forum pages for various clients. Photoshop became quite popular at the time and I've spend hundreds of hours of going through tutorials, forums, youtube videos and galleries. A forum named Signature-BG (I might be wrong) was a place were other photoshop aspirants would hang out and post their latest works in a form of healthy competition.";
+const additionalInfoMore =
+  "The experience that I've aquired was able to place one of my works as a Semi-Pro level in another forum with thousands of young designers. A year later an opportunity presented itself - I was offered the job of a product designer and did for a year before I signed up for college so I could further improve my skills.";
 
 const additionalInfoParagraph =
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eos? Ipsum earum voluptatem illo harum, repudiandae, a ipsam.";
+  "I love any kind of water sport but rafting is my top choice. I also like architecture, cycling, reading, good food, craft beer and deep conversaions.";
 
 // GLOBAL HANDLERS
 
@@ -46,11 +48,12 @@ function pageRefresh() {
 
 function toggleBio() {
   articleTitle.textContent = "Bio";
-  articleParagraph.textContent = additionalInfo;
-  helloBtn.textContent = "My interests";
+  helloBtn.textContent = "Let's sum up.";
 
   let newP = createNewParagraphElement(additionalInfo);
   shortBioTextBox.appendChild(newP);
+  let newPP = createNewParagraphElement(additionalInfoMore);
+  shortBioTextBox.appendChild(newPP);
   helloBtn.style.display = "none";
   techButton.style.display = "block";
   let helloBackground = document.getElementById("separator");
@@ -58,13 +61,13 @@ function toggleBio() {
 }
 
 function toggleTechnologies() {
-  articleTitle.textContent = "Technologies";
+  articleTitle.textContent = "Sum up";
   articleParagraph.textContent = additionalInfo;
   let newP = createNewParagraphElement(additionalInfoParagraph);
   shortBioTextBox.appendChild(newP);
 
   techButton.textContent = "Return";
-  techButton.style.fontSize = "2rem";
+  techButton.style.fontSize = "1.5rem";
   techButton.addEventListener("click", pageRefresh);
 }
 

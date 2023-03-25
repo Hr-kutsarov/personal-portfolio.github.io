@@ -205,13 +205,13 @@ main {
   font-family: Lobster, sans-serif;
   font-size: 3rem;
   color: black;
-  margin: 2rem 2rem 0 2rem;
+  margin: 2rem 2rem 1rem 2rem;
   box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.09);
 }
 
 #short-bio-text > p {
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
@@ -331,7 +331,7 @@ swiper-slide img {
   border-radius: 1rem;
 }
 
-/* TIMELINE EDUCATION TIMELINE EDUCATION TIMELINE EDUCATION TIMELINE EDUCATION TIMELINE EDUCATION*/
+/* TIMELINE EDUCATION TIMELINE EDUCATION TIMELINE EDUCATION TIMELINE EDUCATION */
 
 #education {
   display: flex;
