@@ -244,6 +244,7 @@ main {
   font-size: 8rem;
   font-family: Lobster;
   opacity: 0.1;
+  filter: blur(1px);
 }
 
 #separator2 {
@@ -254,8 +255,10 @@ main {
   position: absolute;
   font-size: 55rem;
   font-family: Lobster;
-  opacity: 0.05;
+  opacity: 0.02;
   z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 /* BUTTONS  BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS*/
 
