@@ -42,12 +42,11 @@
   0% {
     font-size: 1rem;
   }
-
   66% {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   100% {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -56,13 +55,10 @@
     background-color: var(--red);
   }
 
-  25% {
+  33% {
     background-color: var(--blue);
   }
-  50% {
-    background-color: var(--yellow);
-  }
-  75% {
+  66% {
     background-color: var(--orange);
   }
   100% {
@@ -209,7 +205,6 @@ main {
   display: flex;
   flex-direction: column;
   margin: 4rem 2rem 2rem 2rem;
-
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.09);
@@ -234,8 +229,13 @@ main {
   font-size: 1.2rem;
   line-height: 1.6rem;
   animation: fade-slide-in 0.3s ease-out forwards;
+  letter-spacing: 0.01rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
+
 /* SEPARATORS SEPARATORS SEPARATORS SEPARATORS SEPARATORS SEPARATORS */
+
 #separator {
   width: auto;
   height: auto;
@@ -477,9 +477,69 @@ swiper-slide img {
   box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.09);
 }
 
+/*  certificates */
+.certificate {
+  height: 1120px;
+  width: 780px;
+  background-color: white;
+  z-index: 2 !important;
+  position: absolute;
+  transition: all 0.5s;
+  left: 17.5%;
+  display: none;
+  border-radius: 1rem;
+}
+
+#cert-react {
+  background-image: url("./static/certs/react-cert.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#cert-htmlcss {
+  background-image: url("./static/certs/htmlcss.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#cert-pythonOOP {
+  background-image: url("./static/certs/pyOop.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#cert-pythonDjango {
+  background-image: url("./static/certs/pyDjango.jfif");
+}
+
+#cert-pythonWeb {
+  background-image: url("./static/certs/pyWeb.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#cert-pyhtonAdv {
+  background-image: url("./static/certs/pyAdv.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#cert-pythonFund {
+  background-image: url("./static/certs/pyFund.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 
 #important-date {
   color: var(--red);
-}
+} */
 
 /* HIDE STUFF */
 #college-school-box,
@@ -489,16 +549,6 @@ swiper-slide img {
   display: none;
   animation: fade-slide-in 0.3s ease-out forwards;
 }
-/* #economics-school-box {
-  display: none;
-}
-
-#culinary-school-box {
-  display: none;
-}
-
-#show-all {
-  display: none; */
 
 /* INTERESTS SECTION INTERESTS SECTION INTERESTS SECTION INTERESTS SECTION */
 
@@ -509,8 +559,9 @@ swiper-slide img {
   align-items: center;
   border-radius: 1rem 1rem 0 0;
 }
+
 #interests-heading > h2 {
-  margin: 3rem 0 2rem 0;
+  margin: 2rem 0;
   font-size: 2rem;
   color: var(--blue);
   display: flex;
@@ -520,8 +571,6 @@ swiper-slide img {
   display: flex;
   background-color: white;
   justify-content: space-evenly;
-
-  padding: 1rem;
 }
 
 #interests > a > img {
@@ -531,9 +580,13 @@ swiper-slide img {
   /* box-shadow: 0 60px 22px -30px black; */
 }
 
+#interests > a:nth-child(3) {
+  margin-top: 0.5rem;
+}
 #interests > a:last-child {
   margin-top: 0.5rem;
 }
+
 /* FOOTER INFO SECTION FOOTER INFO SECTION FOOTER INFO SECTION FOOTER INFO SECTION */
 
 #contact-links-bottom {
@@ -550,6 +603,7 @@ swiper-slide img {
   justify-content: space-around;
   padding: 0 10rem;
 }
+
 #contact-links-bottom > li {
   margin: 1rem 0 0 0.5rem;
   font-size: 1.2rem;
@@ -560,7 +614,7 @@ swiper-slide img {
 
 #contact-links-bottom > li:hover {
   animation-name: grow;
-  animation-duration: 1.5s;
+  animation-duration: 0.3s;
 }
 
 a {
@@ -571,6 +625,15 @@ a {
 @media screen and (width < 860px) {
   aside {
     padding: 1.5rem;
+  }
+  .certificate {
+    width: 90vw;
+    height: 100vh;
+    left: 3rem;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -594,6 +657,7 @@ a {
   #avatar-pic {
     display: none;
   }
+
   aside {
     background-color: var(--blue);
     display: flex;
@@ -680,7 +744,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     padding: 1rem;
   }
 
@@ -728,6 +791,10 @@ a {
     right: auto;
     left: 146px;
   }
+
+  .certificate {
+    left: 2rem;
+  }
 }
 
 @media screen and (width < 655px) {
@@ -765,6 +832,11 @@ a {
   }
   #contact-links-bottom {
     padding: 0 1rem;
+  }
+  .certificate {
+    left: 1rem;
+    padding: 1rem;
+    /* object-fit: contain; */
   }
 }
 
