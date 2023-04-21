@@ -98,7 +98,7 @@ body {
   box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.09);
 }
 
-/* AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR AVATAR*/
+/* Profile Picture */
 .avatar-container {
   display: flex;
   justify-content: center;
@@ -116,9 +116,9 @@ body {
   background-image: url("./static/HK_ppic.jpg");
 }
 
-/* SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR*/
-/* changed to header functionality for better UX */
-aside {
+/* HEADER SECTION */
+
+header {
   background-color: var(--blue);
   display: grid;
   grid-template-columns: 30% 45% 25%;
@@ -127,24 +127,24 @@ aside {
   border-radius: 0 0 1rem 1rem;
 }
 
-.aside-content-wrap {
+.header-content-wrap {
   display: flex;
   margin-left: 1rem;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.aside-content-wrap > h1 {
+.header-content-wrap > h1 {
   font-size: 2rem;
   color: white;
 }
 
-.aside-content-wrap > h2 {
+.header-content-wrap > h2 {
   margin-top: 0.5rem;
   font-size: 2rem;
   color: white;
 }
-.aside-content-wrap > p {
+.header-content-wrap > p {
   font-size: 1.2rem;
   margin-top: 1.2rem;
   color: whitesmoke;
@@ -626,7 +626,7 @@ a {
 }
 
 @media screen and (width < 860px) {
-  aside {
+  header {
     padding: 1.5rem;
   }
   .certificate {
@@ -661,7 +661,7 @@ a {
     display: none;
   }
 
-  aside {
+  header {
     background-color: var(--blue);
     display: flex;
     flex-direction: column;
@@ -670,7 +670,7 @@ a {
     border-radius: 0 0 1rem 1rem;
   }
 
-  .aside-content-wrap {
+  .header-content-wrap {
     display: flex;
     margin: 5rem 1rem 1rem 1rem;
 
@@ -678,19 +678,19 @@ a {
     justify-content: space-evenly;
   }
 
-  .aside-content-wrap > h1 {
+  .header-content-wrap > h1 {
     margin-top: 2rem;
     font-size: 4rem;
     line-height: 3rem;
     color: white;
   }
 
-  .aside-content-wrap > h2 {
+  .header-content-wrap > h2 {
     margin-top: 1rem;
     font-size: 3.5rem;
     color: white;
   }
-  .aside-content-wrap > p {
+  .header-content-wrap > p {
     font-size: 2rem;
     margin-top: 4rem;
     line-height: 2rem;
@@ -845,17 +845,16 @@ a {
   }
   .certificate {
     left: 1rem;
-    padding: 1rem;
-    /* object-fit: contain; */
+    padding: 1rem;1
   }
 }
 
 @media screen and (width < 510px) {
-  aside {
+  header {
     padding: 0.5rem;
   }
 
-  .aside-content-wrap {
+  .header-content-wrap {
     display: flex;
     margin-top: 2rem;
     margin-left: 10vw;
@@ -863,23 +862,23 @@ a {
     justify-content: space-evenly;
   }
 
-  .aside-content-wrap > h1 {
+  .header-content-wrap > h1 {
     font-size: 3rem;
   }
 
-  .aside-content-wrap > h2 {
+  .header-content-wrap > h2 {
     margin-top: 0.5rem;
 
     font-size: 2rem;
     color: white;
   }
-  .aside-content-wrap > p {
+  .header-content-wrap > p {
     font-size: 1.5rem;
     margin-top: 2rem;
   }
   #contact-links {
     margin: 0;
-    margin-top: 2rem;
+    margin: 3rem 0;
     flex-direction: column;
   }
   #contact-links > li {
