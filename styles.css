@@ -327,6 +327,9 @@ swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .swiper-box {
@@ -647,7 +650,7 @@ a {
 @media screen and (width < 755px) {
   /* swiper */
   swiper-slide {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   swiper-slide > p {
@@ -799,7 +802,7 @@ a {
 
 @media screen and (width < 655px) {
   swiper-slide {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   swiper-slide > p {
@@ -809,8 +812,15 @@ a {
 }
 
 @media screen and (width < 620px) {
+  swiper-slide > p {
+    font-size: 1.5rem;
+  }
+  #experience {
+    padding: 0;
+    margin: 0;
+  }
   swiper-slide {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   swiper-slide > p {
