@@ -38,7 +38,7 @@
   }
 }
 
-@keyframes grow {
+/* @keyframes grow {
   0% {
     font-size: 1rem;
   }
@@ -48,7 +48,7 @@
   100% {
     font-size: 1.2rem;
   }
-}
+} */
 
 @keyframes rainbow {
   0% {
@@ -94,7 +94,6 @@ body {
 }
 
 .shadow {
-  /* box-shadow: 2px 4px 8px hsl(0, 0%, 0%, 0.3); */
   box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.09);
 }
 
@@ -156,31 +155,27 @@ header {
 }
 
 #btn-project:hover {
-  /* transition-duration: 2s 0; */
   animation-name: rainbow;
   animation-duration: 3s;
 }
 
 #contact-links {
   display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
-}
-#contact-links > li {
-  margin: 1 0 0 0.5rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: whitesmoke;
-  list-style-type: none;
-  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.5rem;
 }
 
-#contact-links > li:first-child {
-  margin-bottom: 1rem;
-  cursor: none;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-left: 0;
+#contact-links > li {
+  margin: 1 0 0 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  list-style-type: none;
+  position: relative;
+  padding: 0.7rem 3rem;
+  border-radius: 0.5rem;
+  color: var(--blue);
+  min-width: 7rem;
 }
 
 a {
@@ -191,6 +186,9 @@ a {
 #contact-links > li:hover {
   animation-name: moveRight;
   animation-duration: 2s;
+  background-color: var(--blue);
+  color: whitesmoke;
+  box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.09);
 }
 
 /* MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION*/
@@ -215,6 +213,7 @@ main {
   flex-direction: column;
   animation: fade-slide-in 0.3s ease-out forwards;
 }
+
 #short-bio-text > h2 {
   font-family: Lobster, sans-serif;
   font-size: 3rem;
@@ -287,10 +286,6 @@ main {
   background-color: var(--orange);
 }
 
-.less-education-info {
-  display: none;
-}
-
 /* SWIPER SWIPER SWIPER SWIPER SWIPER SWIPER SWIPER SWIPER SWIPER*/
 swiper-container {
   width: 100%;
@@ -359,7 +354,6 @@ swiper-slide img {
   text-underline-offset: 1rem;
 }
 
-/* margin- from the end of the title to the bottom of the page */
 #timeline-container {
   margin: 3rem 0;
 }
@@ -548,7 +542,7 @@ swiper-slide img {
 #college-school-box,
 #economics-school-box,
 #culinary-school-box,
-#show-all {
+#show-less-education {
   display: none;
   animation: fade-slide-in 0.3s ease-out forwards;
 }
@@ -580,7 +574,6 @@ swiper-slide img {
   min-height: 50px;
   max-height: 70px;
   margin-bottom: 2rem;
-  /* box-shadow: 0 60px 22px -30px black; */
 }
 
 #interests > a:nth-child(3) {
@@ -611,14 +604,15 @@ swiper-slide img {
   margin: 1rem 0 0 0.5rem;
   font-size: 1.2rem;
   cursor: pointer;
-  color: whitesmoke;
+  /* color: whitesmoke; */
   list-style-type: none;
+  color: whitesmoke;
 }
 
-#contact-links-bottom > li:hover {
+/* #contact-links-bottom > li:hover {
   animation-name: grow;
   animation-duration: 0.3s;
-}
+} */
 
 a {
   text-decoration: none;
@@ -703,8 +697,9 @@ a {
   }
 
   #contact-links {
-    flex-direction: row;
-    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    margin: auto;
   }
 
   #contact-links > li {
@@ -845,7 +840,7 @@ a {
   }
   .certificate {
     left: 1rem;
-    padding: 1rem;1
+    padding: 1rem;
   }
 }
 

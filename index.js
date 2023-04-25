@@ -17,8 +17,8 @@ const helloBtn = document.getElementById("hello-btn");
 const collegeSchoolBox = document.getElementById("college-school-box");
 const culinarySchoolBox = document.getElementById("culinary-school-box");
 const economicsSchoolBox = document.getElementById("economics-school-box");
-const moreInfoButton = document.getElementById("more-education-info");
-const showAllButton = document.getElementById("show-all");
+const showLessEduBtn = document.getElementById("show-less-education");
+const showMoreEduBtn = document.getElementById("show-more-education");
 //
 const certReact = document.getElementById("react");
 const certHtml = document.getElementById("htmlcss");
@@ -96,13 +96,16 @@ pythonFundModal.addEventListener("click", handlePythonFundModal);
 // SIDE BAR //
 function displayEmail() {
   emailNav.textContent = "hr.kutsarov@gmail.com";
-  // setTimeout(() => {
-  //   emailNav.textContent = "E-mail";
-  // }, "5000");
+  setTimeout(() => {
+    emailNav.textContent = "E-mail";
+  }, "5000");
 }
 
 function displayPhone() {
   viberNav.textContent = "+359 889 162334";
+  setTimeout(() => {
+    viberNav.textContent = "Viber";
+  }, "5000");
 }
 
 function showAvatar() {
@@ -112,27 +115,20 @@ function hideAvatar() {
   avatarPic.style.display = "none";
 }
 
-function showInfoEducation() {
+function showMoreEd() {
   collegeSchoolBox.style.display = "block";
   culinarySchoolBox.style.display = "block";
   economicsSchoolBox.style.display = "block";
-  moreInfoButton.textContent = "Show less";
-  moreInfoButton.addEventListener("click", clearInfoEducation);
+  showMoreEduBtn.style.display = "none";
+  showLessEduBtn.style.display = "block";
 }
 
-function clearInfoEducation() {
-  let timelineBox = document.querySelector(".timeline");
-  timelineBox.classList.add("invisible");
-  timelineBox.style.display = "none";
-  showAllButton.style.display = "block";
-  showAllButton.addEventListener("dblclick", showEverythingEducation);
-  moreInfoButton.style.display = "none";
-}
-
-function showEverythingEducation() {
-  let timelineBox = document.querySelector(".timeline");
-  timelineBox.style.display = "block";
-  showAllButton.style.display = "none";
+function showLessEd() {
+  collegeSchoolBox.style.display = "none";
+  culinarySchoolBox.style.display = "none";
+  economicsSchoolBox.style.display = "none";
+  showMoreEduBtn.style.display = "block";
+  showLessEduBtn.style.display = "none";
 }
 
 // modals handlers //
@@ -179,6 +175,7 @@ function handlePythonFundModal() {
 function toggleReactModal() {
   reactModal.style.display = "flex";
 }
+education;
 function toggleHtmlModal() {
   htmlcssModal.style.display = "flex";
 }
@@ -203,9 +200,9 @@ helloBtn.addEventListener("click", toggleBio);
 techButton.addEventListener("click", toggleTechnologies);
 emailNav.addEventListener("mouseover", displayEmail);
 viberNav.addEventListener("mouseover", displayPhone);
-avatarPic.addEventListener("click", hideAvatar);
-moreInfoButton.addEventListener("click", showInfoEducation);
-//
+showMoreEduBtn.addEventListener("click", showMoreEd);
+showLessEduBtn.addEventListener("click", showLessEd);
+
 certReact.addEventListener("click", toggleReactModal);
 certHtml.addEventListener("click", toggleHtmlModal);
 certOop.addEventListener("click", togglePyOopModal);
